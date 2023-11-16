@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://baxnj4g1yn63y"]
+
+[ext_resource type="Texture2D" uid="uid://b8moletmxjwob" path="res://assets/COYE net.png" id="1_q0w26"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t25cq"]
+size = Vector2(256, 774)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="COYENet" type="Sprite2D" parent="."]
+position = Vector2(34, 59)
+scale = Vector2(0.019375, 0.0209375)
+texture = ExtResource("1_q0w26")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(62, 260)
+shape = SubResource("RectangleShape2D_t25cq")

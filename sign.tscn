@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://mi2vjgf6e4fa"]
+
+[ext_resource type="Script" path="res://sign.gd" id="1_i6hr4"]
+[ext_resource type="Texture2D" uid="uid://1gcrrm7chc6i" path="res://assets/sign.png" id="1_ijq2o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfh3r"]
+size = Vector2(649, 177)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_i6hr4")
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, 1)
+scale = Vector2(0.652344, 0.644657)
+texture = ExtResource("1_ijq2o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 2)
+shape = SubResource("RectangleShape2D_qfh3r")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -54.0
+offset_top = -30.0
+offset_right = 69.0
+offset_bottom = -3.0
+theme_override_font_sizes/font_size = 14
+text = "Banding Station"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

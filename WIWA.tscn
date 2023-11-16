@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnp4byfux7058"]
+
+[ext_resource type="Texture2D" uid="uid://7mf0y2ff5sjc" path="res://assets/WIWA.png" id="1_qn62k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pxq3h"]
+radius = 75.1665
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Wiwa" type="Sprite2D" parent="."]
+scale = Vector2(0.155273, 0.155273)
+texture = ExtResource("1_qn62k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -1)
+shape = SubResource("CircleShape2D_pxq3h")

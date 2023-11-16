@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2mxg4d6l1jn2"]
+
+[ext_resource type="Texture2D" uid="uid://b4tyirpac5r2o" path="res://assets/SPTO.png" id="1_36noi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7y63h"]
+radius = 85.0059
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Spto" type="Sprite2D" parent="."]
+position = Vector2(1, 1.99999)
+scale = Vector2(0.177734, 0.177734)
+texture = ExtResource("1_36noi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7y63h")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckel1q53y7njq"]
+
+[ext_resource type="Texture2D" uid="uid://boewnfke1qk14" path="res://assets/Sunrise.png" id="1_hl7m0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omslh"]
+size = Vector2(780, 778)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sunrise" type="Sprite2D" parent="."]
+position = Vector2(-19, 0)
+scale = Vector2(0.759766, 0.759766)
+texture = ExtResource("1_hl7m0")
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-19, 1)
+shape = SubResource("RectangleShape2D_omslh")

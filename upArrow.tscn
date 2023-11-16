@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://tnhv6xwpfbeh"]
+
+[ext_resource type="Texture2D" uid="uid://ce0ppj0rpblrq" path="res://assets/arrowUp.png" id="1_nr874"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2kt0"]
+size = Vector2(97, 103)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="UpArrow" type="Sprite2D" parent="."]
+position = Vector2(45, 50)
+scale = Vector2(0.20625, 0.20625)
+texture = ExtResource("1_nr874")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(47, 49)
+shape = SubResource("RectangleShape2D_a2kt0")

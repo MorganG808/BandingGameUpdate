@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgip75sohunts"]
+
+[ext_resource type="Texture2D" uid="uid://dv7j6y1l0oguc" path="res://assets/net.png" id="1_jx863"]
+
+[node name="net" type="Area2D"]
+
+[node name="Net3" type="Sprite2D" parent="."]
+position = Vector2(3, 0.999998)
+scale = Vector2(1.71515, 1.62891)
+texture = ExtResource("1_jx863")

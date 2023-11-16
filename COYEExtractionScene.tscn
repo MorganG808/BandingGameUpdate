@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://bk7u8jlhn3enu"]
+
+[ext_resource type="Texture2D" uid="uid://dv7j6y1l0oguc" path="res://assets/net.png" id="1_ufbqq"]
+[ext_resource type="PackedScene" uid="uid://baxnj4g1yn63y" path="res://NetCOYE.tscn" id="2_3v55t"]
+[ext_resource type="PackedScene" uid="uid://bes2xcegc7iu7" path="res://rightArrow.tscn" id="3_34b73"]
+[ext_resource type="PackedScene" uid="uid://ggx5bcrjr172" path="res://leftArrow.tscn" id="4_2ixlo"]
+[ext_resource type="PackedScene" uid="uid://tnhv6xwpfbeh" path="res://upArrow.tscn" id="5_l84n2"]
+[ext_resource type="Script" path="res://leftArrow.gd" id="6_as8bg"]
+[ext_resource type="PackedScene" uid="uid://c57vn4hmnjbvo" path="res://downArrow.tscn" id="6_ovrre"]
+
+[node name="CATHExtractionScene" type="Node2D"]
+position = Vector2(-816, -353)
+
+[node name="Net" type="Sprite2D" parent="."]
+position = Vector2(1379.5, 668.25)
+scale = Vector2(4.5026, 4.5026)
+texture = ExtResource("1_ufbqq")
+
+[node name="COYE" parent="." instance=ExtResource("2_3v55t")]
+position = Vector2(1331.5, 595.25)
+
+[node name="RightArrow" parent="." instance=ExtResource("3_34b73")]
+position = Vector2(1468.5, 592.25)
+
+[node name="UpArrow" parent="." instance=ExtResource("5_l84n2")]
+position = Vector2(1314.5, 396.25)
+
+[node name="DownArrow" parent="." instance=ExtResource("6_ovrre")]
+position = Vector2(1313.5, 798.25)
+
+[node name="LeftArrow" parent="." instance=ExtResource("4_2ixlo")]
+position = Vector2(1169.5, 593.25)
+script = ExtResource("6_as8bg")

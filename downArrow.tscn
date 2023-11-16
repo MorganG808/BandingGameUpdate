@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c57vn4hmnjbvo"]
+
+[ext_resource type="Texture2D" uid="uid://ciydru54qg4tk" path="res://assets/arrowDown.png" id="1_hfrju"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8h8bq"]
+size = Vector2(106.75, 102.75)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="DownArrow" type="Sprite2D" parent="."]
+position = Vector2(54, 49)
+scale = Vector2(0.231, 0.206)
+texture = ExtResource("1_hfrju")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(53.625, 50.625)
+shape = SubResource("RectangleShape2D_8h8bq")

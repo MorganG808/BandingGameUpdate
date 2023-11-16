@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://tywuom50j6h0"]
+
+[ext_resource type="Texture2D" uid="uid://d1c6v501gvxal" path="res://assets/clickedArrowDown.png" id="1_k8buc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyh4r"]
+size = Vector2(2507.99, 2607.1)
+
+[node name="Area2D" type="Area2D"]
+scale = Vector2(0.206, 0.206)
+
+[node name="ClickedArrowDown" type="Sprite2D" parent="."]
+position = Vector2(266.99, 266.99)
+scale = Vector2(2.48894, 2.48894)
+texture = ExtResource("1_k8buc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(256.24, 270.303)
+scale = Vector2(0.206, 0.206)
+shape = SubResource("RectangleShape2D_eyh4r")

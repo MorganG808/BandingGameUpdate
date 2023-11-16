@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://de71k25hbah6c"]
+
+[ext_resource type="Texture2D" uid="uid://bu8g5hlpynl53" path="res://assets/birdBag.png" id="1_5mvj4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kkepe"]
+radius = 38.0
+height = 126.0
+
+[node name="birdBag" type="Area2D"]
+
+[node name="BirdBag" type="Sprite2D" parent="."]
+position = Vector2(31, 63)
+scale = Vector2(0.123047, 0.123047)
+texture = ExtResource("1_5mvj4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28, 62)
+shape = SubResource("CapsuleShape2D_kkepe")

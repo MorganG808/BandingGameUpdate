@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://cfoj8bv1ylkji"]
+
+[ext_resource type="Script" path="res://DesertCottontail.gd" id="1_l8lig"]
+[ext_resource type="Texture2D" uid="uid://3im8sxa61ef1" path="res://assets/Desert Cottontail.png" id="1_mamq3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j542t"]
+size = Vector2(953.75, 1043)
+
+[sub_resource type="Animation" id="Animation_pe43m"]
+resource_name = "walk_left"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DesertCottontail:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_lkwir"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DesertCottontail:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_3co4h"]
+resource_name = "run_left"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DesertCottontail:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hvck1"]
+_data = {
+"RESET": SubResource("Animation_lkwir"),
+"run_left": SubResource("Animation_3co4h"),
+"walk_left": SubResource("Animation_pe43m")
+}
+
+[node name="Area2D" type="CharacterBody2D"]
+script = ExtResource("1_l8lig")
+
+[node name="DesertCottontail" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("1_mamq3")
+hframes = 3
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(23.125, -5)
+shape = SubResource("RectangleShape2D_j542t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hvck1")
+}

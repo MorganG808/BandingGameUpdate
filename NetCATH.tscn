@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqv6pxdo1ttdt"]
+
+[ext_resource type="Texture2D" uid="uid://cof1urdpf0sid" path="res://assets/CATH net.png" id="1_upuc6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kslj6"]
+size = Vector2(146, 788)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CathNet" type="Sprite2D" parent="."]
+position = Vector2(46, 104)
+scale = Vector2(0.192, 0.222)
+texture = ExtResource("1_upuc6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(63, 283)
+shape = SubResource("RectangleShape2D_kslj6")

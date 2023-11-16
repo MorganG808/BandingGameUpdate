@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx5y85ytpgljq"]
+
+[ext_resource type="Texture2D" uid="uid://rb063yijubse" path="res://assets/CATH.png" id="1_nb4rw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_so6jn"]
+radius = 158.114
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Cath" type="Sprite2D" parent="."]
+position = Vector2(0.999999, 9.53674e-07)
+scale = Vector2(0.335937, 0.335937)
+texture = ExtResource("1_nb4rw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, 0)
+shape = SubResource("CircleShape2D_so6jn")

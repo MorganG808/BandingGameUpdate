@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwnejt8onvg4r"]
+
+[ext_resource type="Texture2D" uid="uid://n78arh1hx7xq" path="res://assets/Trail.png" id="1_pqo2d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qho0t"]
+size = Vector2(174, 169.75)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="TileSheet" type="Sprite2D" parent="."]
+position = Vector2(-6.10352e-05, -1.00003)
+scale = Vector2(0.162109, 0.162109)
+texture = ExtResource("1_pqo2d")
+hframes = 2
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2.875)
+shape = SubResource("RectangleShape2D_qho0t")

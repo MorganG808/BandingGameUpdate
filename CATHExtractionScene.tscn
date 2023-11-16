@@ -1,0 +1,53 @@
+[gd_scene load_steps=13 format=3 uid="uid://b7ic7fkmduce5"]
+
+[ext_resource type="PackedScene" uid="uid://cqv6pxdo1ttdt" path="res://NetCATH.tscn" id="1_2wdli"]
+[ext_resource type="Texture2D" uid="uid://dv7j6y1l0oguc" path="res://assets/net.png" id="1_6n456"]
+[ext_resource type="Script" path="res://CATHExtractionScene.gd" id="1_hm8tx"]
+[ext_resource type="PackedScene" uid="uid://bes2xcegc7iu7" path="res://rightArrow.tscn" id="2_fgnsb"]
+[ext_resource type="PackedScene" uid="uid://tnhv6xwpfbeh" path="res://upArrow.tscn" id="3_jhawu"]
+[ext_resource type="PackedScene" uid="uid://c57vn4hmnjbvo" path="res://downArrow.tscn" id="4_hfrwi"]
+[ext_resource type="PackedScene" uid="uid://ggx5bcrjr172" path="res://leftArrow.tscn" id="5_wvvim"]
+[ext_resource type="Script" path="res://leftArrow.gd" id="6_vag67"]
+[ext_resource type="PackedScene" uid="uid://tywuom50j6h0" path="res://clickedArrowDown.tscn" id="9_k1dbf"]
+[ext_resource type="PackedScene" uid="uid://ixr07cj4us17" path="res://clickedArrowLeft.tscn" id="10_435tb"]
+[ext_resource type="PackedScene" uid="uid://ddux0bwb8drll" path="res://clickedArrowUp.tscn" id="11_pdgn0"]
+[ext_resource type="PackedScene" uid="uid://bwvaecrsuppmf" path="res://clickedRightArrow.tscn" id="12_k46tt"]
+
+[node name="CATHExtractionScene" type="Node2D"]
+position = Vector2(0, 11)
+script = ExtResource("1_hm8tx")
+
+[node name="Net" type="Sprite2D" parent="."]
+position = Vector2(539.499, 324.25)
+scale = Vector2(4.5026, 4.5026)
+texture = ExtResource("1_6n456")
+
+[node name="CATH" parent="." instance=ExtResource("1_2wdli")]
+position = Vector2(473.499, 195.25)
+
+[node name="RightArrow" parent="." instance=ExtResource("2_fgnsb")]
+position = Vector2(652.499, 240.25)
+
+[node name="UpArrow" parent="." instance=ExtResource("3_jhawu")]
+position = Vector2(474.499, 52.2496)
+
+[node name="DownArrow" parent="." instance=ExtResource("4_hfrwi")]
+position = Vector2(473.499, 454.25)
+
+[node name="LeftArrow" parent="." instance=ExtResource("5_wvvim")]
+position = Vector2(308.499, 238.25)
+script = ExtResource("6_vag67")
+
+[node name="clickedDownArrow" parent="." instance=ExtResource("9_k1dbf")]
+visible = false
+position = Vector2(472, 452)
+
+[node name="clickedLeftArrow" parent="." instance=ExtResource("10_435tb")]
+position = Vector2(327, 894)
+
+[node name="clickedUpArrow" parent="." instance=ExtResource("11_pdgn0")]
+position = Vector2(2, 687)
+
+[node name="clickedArrowRight" parent="." instance=ExtResource("12_k46tt")]
+visible = false
+position = Vector2(650, 239)

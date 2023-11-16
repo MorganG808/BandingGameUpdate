@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7wsg5b1anxpu"]
+
+[ext_resource type="Texture2D" uid="uid://bv6v4imcuxsh1" path="res://assets/Blue Sky.png" id="1_4f11l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7ab0"]
+size = Vector2(1035, 1018)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="BlueSky" type="Sprite2D" parent="."]
+position = Vector2(8, -5)
+texture = ExtResource("1_4f11l")
+hframes = 4
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -2)
+shape = SubResource("RectangleShape2D_q7ab0")

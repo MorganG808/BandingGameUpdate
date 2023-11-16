@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cib1igx4jgwsu"]
+
+[ext_resource type="Texture2D" uid="uid://cst2ri08pvlgi" path="res://assets/ANHU.png" id="1_7aylh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6r0s0"]
+radius = 93.7443
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Anhu" type="Sprite2D" parent="."]
+position = Vector2(7.62939e-06, 2)
+scale = Vector2(0.187988, 0.187988)
+texture = ExtResource("1_7aylh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6r0s0")

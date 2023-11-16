@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgx7uku6de3h5"]
+
+[ext_resource type="Texture2D" uid="uid://gn67co0u6kjr" path="res://assets/COYE.png" id="1_b3lwr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sggx5"]
+radius = 82.1523
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Coye" type="Sprite2D" parent="."]
+position = Vector2(1.00001, 2)
+scale = Vector2(0.172852, 0.172852)
+texture = ExtResource("1_b3lwr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sggx5")

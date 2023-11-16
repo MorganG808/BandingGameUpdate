@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://7ti8q13tp4u0"]
+
+[ext_resource type="Texture2D" uid="uid://dv7j6y1l0oguc" path="res://assets/net.png" id="1_0u68r"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(3368, 2718)
+
+[node name="Net" type="Sprite2D" parent="."]
+position = Vector2(-2365, -2266)
+scale = Vector2(5.375, 5.375)
+texture = ExtResource("1_0u68r")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1idfmyi6iy78"]
+
+[ext_resource type="Texture2D" uid="uid://nfw7eeuckjdh" path="res://assets/Striped Racer.png" id="1_jg4bt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ud71k"]
+size = Vector2(227, 238)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="StripedRacer" type="Sprite2D" parent="."]
+position = Vector2(-3, 0)
+scale = Vector2(0.230469, 0.230469)
+texture = ExtResource("1_jg4bt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-17, -2)
+shape = SubResource("RectangleShape2D_ud71k")
